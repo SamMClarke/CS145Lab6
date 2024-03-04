@@ -1,0 +1,5 @@
+Q:Is it an animal?
+Q:Does it meow?
+A:cat
+A:Dog
+A:computer

@@ -43,9 +43,7 @@ public class QuestionTree
                 ui.print("Type a yes/no question to distinguish your item from " + root.data + ":");
                 String question = ui.nextLine();
                 ui.print("And what is the answer for your object?");
-                boolean answer = ui.nextBoolean();
-
-                if (answer)
+                if (ui.nextBoolean())
                 {
                     root.yes = new QuestionNode(object);
                     root.no = new QuestionNode(root.data);
@@ -75,7 +73,23 @@ public class QuestionTree
 
     public void save(PrintStream output)
     {
-        
+        save(output, overallRoot);
+    }
+
+    private void save(PrintStream output, QuestionNode root)
+    {
+        if (root.yes == null && root.no == null)
+        {
+            //Base case
+            output.println("A:" + root.data);
+        }
+        else
+        {
+            //Recursive case
+            output.println("Q:" + root.data);
+            save(output, root.yes);
+            save(output, root.no);
+        }
     }
 
     public void load(Scanner input)
