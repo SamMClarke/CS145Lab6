@@ -1,7 +1,4 @@
 import java.util.*;
-
-import javax.xml.bind.annotation.W3CDomHandler;
-
 import java.io.*;
 
 public class QuestionTree
@@ -13,6 +10,10 @@ public class QuestionTree
 
     public QuestionTree(UserInterface ui)
     {
+        if (ui == null)
+        {
+            throw new IllegalArgumentException("UI parameter is null");
+        }
         overallRoot = new QuestionNode("computer");
         this.ui = ui;
     }
@@ -73,6 +74,10 @@ public class QuestionTree
 
     public void save(PrintStream output)
     {
+        if (output == null)
+        {
+            throw new IllegalArgumentException("Output parameter is null");
+        }
         save(output, overallRoot);
     }
 
@@ -94,7 +99,16 @@ public class QuestionTree
 
     public void load(Scanner input)
     {
+        if (input == null)
+        {
+            throw new IllegalArgumentException("Input parameter is null");
+        }
+        load(input, overallRoot);
+    }
 
+    private void load(Scanner input, QuestionNode root)
+    {
+        
     }
 
     public int totalGames()
