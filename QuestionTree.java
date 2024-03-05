@@ -25,7 +25,7 @@ public class QuestionTree
 
     private void play(QuestionNode root)
     {
-        if (root.yes == null && root.no == null)
+        if (root.yes == null && root.no == null) //Leaf Node
         {
             //Base case
             gamesPlayed++;
@@ -103,12 +103,28 @@ public class QuestionTree
         {
             throw new IllegalArgumentException("Input parameter is null");
         }
-        load(input, overallRoot);
+        overallRoot = loadHelper(input);
     }
 
-    private void load(Scanner input, QuestionNode root)
+    private QuestionNode loadHelper(Scanner input)
     {
-        
+        QuestionNode root;
+        if (!input.hasNextLine())
+        {
+            return null;
+        }
+        String nextLine = input.nextLine();
+        if (nextLine.charAt(0) == 'Q')
+        {
+            root = new QuestionNode(nextLine.substring(2));
+            root.yes = loadHelper(input);
+            root.no = loadHelper(input);
+        }
+        else
+        {
+            root = new QuestionNode(nextLine.substring(2));
+        }
+        return root;
     }
 
     public int totalGames()
