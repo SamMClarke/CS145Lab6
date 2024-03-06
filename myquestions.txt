@@ -1,0 +1,13 @@
+Q:Is it a vehicle?
+Q:Does it have 4 wheels?
+Q:Is it a truck?
+A:pickup
+A:sports car
+A:bicycle
+Q:Does it have feathers?
+Q:Is it nice?
+A:duck
+A:goose
+Q:Is it a place?
+A:New York City
+A:computer
