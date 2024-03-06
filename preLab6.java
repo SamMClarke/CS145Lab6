@@ -1,29 +1,28 @@
-/*
-Sam Clarke
-03/04/2024
-CS145
-
-This program plays 20 Questions with the user.
+/**
+ * JakobTak
+ * 03/04/2024
+ * CS145
+ * This program plays 20 Questions with the user.
 */
 
 
-//For QuestionNode.java
+// QuestionNode.java
 
-//Creates a new question node with the string data as the data field.
-//public QuestionNode(String data)
-//Simply sets this.data to data and the left and right to null.
+// Creates a new question node with the string data as the data field.
+// public QuestionNode(String data)
+// Simply sets this.data to data and the left and right to null.
 
-//Creates a new question node with the string as the data field and the left and right fields as yes and no respectively.
-//public QuestionNode(String data, QuestionNode yes, QuestionNode no)
-//Simply sets this.data, this.yes, and this.no to their respective fields.
+// Creates a new question node with the string as the data field and the left and right fields as yes and no respectively.
+// public QuestionNode(String data, QuestionNode yes, QuestionNode no)
+// Simply sets this.data, this.yes, and this.no to their respective fields.
 
 
-//For QuestionTree.java
+// QuestionTree.java
 
-//Creates a new question tree with a default starting node
-//public QuestionTree(UserInterface ui)
-//Sets overallroot to a node with the data "computer".
-//Saves the ui parameter in a private variable.
+// Creates a new question tree with a default starting node
+// public QuestionTree(UserInterface ui)
+// Sets overallroot to a node with the data "computer".
+// Saves the ui parameter in a private variable.
 
 //Plays one complete game of 20 Questions with the user
 //public void play()
